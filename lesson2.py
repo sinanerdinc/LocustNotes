@@ -1,9 +1,14 @@
 import random
-from locust import HttpLocust, TaskSet
+from locust import HttpLocust, TaskSet, web
 from data.blog import Blog
 
 
 website_url = Blog.url()
+
+"""Flask üzerinde bir sayfa oluşturma"""
+@web.app.route("/test")
+def my_added_page():
+    return "Test Sayfası"
 
 def print_log(param):
     print(param)
