@@ -15,6 +15,7 @@ def not_exist(l):
         print("Response content:", response.text)
         if response.status_code == 404:
             response.success()
+            #response.failure("No data")
 
 def loop_page(l):
     """Teste isim verme ve döngü parametre geçme örneği."""
